@@ -1,0 +1,40 @@
+MCOT v1.0 files
+===============
+
+MCOTv1.0_Diaphorina_citri_protein_AHRD.fasta	(Proteins with AHRD descriptions)
+MCOTv1.0_Diaphorina_citri_cds.zip	
+MCOTv1.0_Diaphorina_citri_protein.zip	
+MCOTv1.0_Diaphorina_citri_transcript.zip
+cufflinks.zip: Original cufflinks output used for MCOT
+Oases.zip: Original Oases output used for MCOT
+Trinity.zip: Original Trinity output used for MCOT
+
+MCOT works by comparing maker and cufflinks models with de novo assemblies by Trinity and Oases. There are 23,419 transcripts, and 30,557 protein sequences. All MCOT protein names are followed by one of these terms:
+MM (original sequence from maker, select maker): 3,660
+MO (original sequence from maker, select Oases): 255
+MT (original sequence from maker, select Trinity): 341
+CC (original sequence from cufflinks, select cufflinks): 18,015
+CT (original sequence from cufflinks, select Trinity): 6,609
+CO (original sequence from cufflinks, select Oases): 6,943
+TT (original sequence from Trinity, select Trinity): 339
+OO (original sequence from Oases, select Oases): 595
+
+E.g. MCOT14092.0.CT | N-carbamoylputrescine amidase | Similar to KRM11194.1 | ***- | PANTHER PTHR23088 | PANTHER PTHR23088:SF9 | Pfam PF00795
+
+CT means “original sequence from cufflinks, select trinity” means that the query sequence is from cufflinks. After comparing this protein sequence to Trinity and Oases, we think the best model is the one from trinity, so we select the one from trinity. Some genes may only exist only in de novo models by Trinity or Oases. That’s why “original sequence” may be from Trinity or Oases.
+
+The description includes Pfam domains, GO terms and a description generated using Uniprot, Interproscan and the AHRD pipeline.
+
+
+MCOT v1.1 file
+==============
+
+MCOTv1.1_Diaphorina_citri_protein_OGS-AHRD.fasta  (Proteins with OGSv1.0 Manually curated and AHRD descriptions)
+Mapping file: Dcitr_NCBI_to_OGSv1.0_id_mapFile_MCOT-Dmel.txt (describes the changes between the original NCBI annotations and the OGSv1.0, MCOT, and Dmel)
+
+
+E.g. MCOT14215.0.CC | Toll-13 | Similar to N0A0P9 | *** | PANTHER PTHR24365 | Pfam PF13855 | Pfam PF00560 | Similar to curated Dcitr19281.1 (Perc. Ident. 98.29 Perc. Cov. 99.84): Toll-13
+
+The description includes Pfam domains, GO terms and a description generated using Uniprot, Interproscan and the AHRD pipeline (Swissprot, Trembl and Dmel dbs).
+
+Additionally, descriptions contains OGSv1.0 manually curated descriptions with percentage identity >85% and percentage coverage >65%.  
